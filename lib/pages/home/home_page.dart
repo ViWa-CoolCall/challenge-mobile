@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 290),
-                    child: ButtonWidget(TemaPage()),
+                    child: ButtonWidget(TemaPage(), "Continuar"),
                   )
                 ],
               ),

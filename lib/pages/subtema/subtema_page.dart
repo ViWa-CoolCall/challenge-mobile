@@ -1,5 +1,6 @@
 import 'package:CoolCall/core/app_gradients.dart';
 import 'package:CoolCall/pages/download/download_page.dart';
+import 'package:CoolCall/pages/tema/tema_page.dart';
 import 'package:CoolCall/shared/button_widget.dart';
 import 'package:CoolCall/shared/card_widget.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ class SubtemaPage extends StatefulWidget {
 
 class _SubtemaPageState extends State<SubtemaPage> {
   final String text = "Subtema";
+  final Widget redirect = DownloadPage();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,8 @@ class _SubtemaPageState extends State<SubtemaPage> {
                 )),
                 Padding(
                   padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
-                  child: Container(height: 130, child: CardWidget(this.text)),
+                  child: Container(
+                      height: 130, child: CardWidget(this.redirect, text)),
                 ),
                 GridView.count(
                   shrinkWrap: true,
@@ -42,15 +45,15 @@ class _SubtemaPageState extends State<SubtemaPage> {
                   mainAxisSpacing: 15,
                   crossAxisCount: 2,
                   children: [
-                    CardWidget(this.text),
-                    CardWidget(this.text),
-                    CardWidget(this.text),
-                    CardWidget(this.text)
+                    CardWidget(this.redirect, text),
+                    CardWidget(this.redirect, text),
+                    CardWidget(this.redirect, text),
+                    CardWidget(this.redirect, text)
                   ],
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20),
-                  child: ButtonWidget(DownloadPage()),
+                  child: ButtonWidget(TemaPage(), "Voltar"),
                 )
               ],
             ),

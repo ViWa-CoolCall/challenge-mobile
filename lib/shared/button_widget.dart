@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
-  ButtonWidget(this.redirect);
+  ButtonWidget(this.redirect, this.text);
 
   final Widget redirect;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class ButtonWidget extends StatelessWidget {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) => this.redirect));
             },
-            child: const Text('Continuar'),
+            child: Text(this.text),
           ),
         ],
       ),

@@ -41,7 +41,7 @@ class _DownloadPageState extends State<DownloadPage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 225),
-                  child: ButtonWidget(SubtemaPage()),
+                  child: ButtonWidget(SubtemaPage(), "Voltar"),
                 )
               ],
             )),

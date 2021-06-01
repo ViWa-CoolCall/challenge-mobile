@@ -1,4 +1,5 @@
 import 'package:CoolCall/core/app_gradients.dart';
+import 'package:CoolCall/pages/home/home_page.dart';
 import 'package:CoolCall/pages/subtema/subtema_page.dart';
 import 'package:CoolCall/shared/button_widget.dart';
 import 'package:CoolCall/shared/card_widget.dart';
@@ -11,6 +12,7 @@ class TemaPage extends StatefulWidget {
 
 class _TemaPageState extends State<TemaPage> {
   final String text = "Tema sobre algo";
+  final Widget redirect = SubtemaPage();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,8 @@ class _TemaPageState extends State<TemaPage> {
                 )),
                 Padding(
                   padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
-                  child: Container(height: 130, child: CardWidget(this.text)),
+                  child: Container(
+                      height: 130, child: CardWidget(this.redirect, this.text)),
                 ),
                 GridView.count(
                   shrinkWrap: true,
@@ -42,15 +45,15 @@ class _TemaPageState extends State<TemaPage> {
                   mainAxisSpacing: 15,
                   crossAxisCount: 2,
                   children: [
-                    CardWidget(this.text),
-                    CardWidget(this.text),
-                    CardWidget(this.text),
-                    CardWidget(this.text)
+                    CardWidget(this.redirect, this.text),
+                    CardWidget(this.redirect, this.text),
+                    CardWidget(this.redirect, this.text),
+                    CardWidget(this.redirect, this.text)
                   ],
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20),
-                  child: ButtonWidget(SubtemaPage()),
+                  child: ButtonWidget(HomePage(), "Voltar"),
                 )
               ],
             ),
