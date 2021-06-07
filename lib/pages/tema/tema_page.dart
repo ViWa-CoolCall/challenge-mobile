@@ -11,7 +11,6 @@ class TemaPage extends StatefulWidget {
 }
 
 class _TemaPageState extends State<TemaPage> {
-  final String text = "Tema sobre algo";
   final Widget redirect = SubtemaPage();
 
   @override
@@ -31,11 +30,6 @@ class _TemaPageState extends State<TemaPage> {
                       color: Colors.white,
                       fontWeight: FontWeight.w600),
                 )),
-                Padding(
-                  padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
-                  child: Container(
-                      height: 130, child: CardWidget(this.redirect, this.text)),
-                ),
                 GridView.count(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -45,15 +39,17 @@ class _TemaPageState extends State<TemaPage> {
                   mainAxisSpacing: 15,
                   crossAxisCount: 2,
                   children: [
-                    CardWidget(this.redirect, this.text),
-                    CardWidget(this.redirect, this.text),
-                    CardWidget(this.redirect, this.text),
-                    CardWidget(this.redirect, this.text)
+                    CardWidget(this.redirect, "Receitas"),
+                    CardWidget(this.redirect, "Despesas"),
+                    CardWidget(this.redirect, "Covid-19"),
+                    CardWidget(this.redirect, "Concessões"),
+                    CardWidget(this.redirect, "Servidores"),
+                    CardWidget(this.redirect, "Balanços")
                   ],
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20),
-                  child: ButtonWidget(HomePage(), "Voltar"),
+                  child: ButtonWidget(HomePage(), "Voltar", 132.5),
                 )
               ],
             ),

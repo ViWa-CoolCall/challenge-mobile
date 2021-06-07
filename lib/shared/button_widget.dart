@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
-  ButtonWidget(this.redirect, this.text);
+  ButtonWidget(this.redirect, this.text, this.width);
 
   final Widget redirect;
   final String text;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle style =
-        ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
-
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -20,7 +18,7 @@ class ButtonWidget extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 120, vertical: 17),
+                padding: EdgeInsets.symmetric(horizontal: width, vertical: 17),
                 textStyle: TextStyle(fontSize: 25),
                 // Usar AppGradients.linear
                 primary: Color.fromRGBO(255, 87, 87, 1)),

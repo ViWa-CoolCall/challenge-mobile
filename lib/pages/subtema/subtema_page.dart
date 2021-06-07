@@ -31,11 +31,6 @@ class _SubtemaPageState extends State<SubtemaPage> {
                       color: Colors.white,
                       fontWeight: FontWeight.w600),
                 )),
-                Padding(
-                  padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
-                  child: Container(
-                      height: 130, child: CardWidget(this.redirect, text)),
-                ),
                 GridView.count(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -48,12 +43,14 @@ class _SubtemaPageState extends State<SubtemaPage> {
                     CardWidget(this.redirect, text),
                     CardWidget(this.redirect, text),
                     CardWidget(this.redirect, text),
+                    CardWidget(this.redirect, text),
+                    CardWidget(this.redirect, text),
                     CardWidget(this.redirect, text)
                   ],
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20),
-                  child: ButtonWidget(TemaPage(), "Voltar"),
+                  child: ButtonWidget(TemaPage(), "Voltar", 132.5),
                 )
               ],
             ),

@@ -1,5 +1,4 @@
 import 'package:CoolCall/core/core.dart';
-import 'package:CoolCall/pages/download/download_page.dart';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
@@ -16,14 +15,27 @@ class CardWidget extends StatelessWidget {
       },
       child: Container(
         decoration: BoxDecoration(
-            color: Color.fromRGBO(255, 255, 255, 0.85),
-            borderRadius: BorderRadius.circular(15),
+            color: Color.fromRGBO(205, 205, 205, 0.1),
+            borderRadius: BorderRadius.circular(10),
             border: Border.fromBorderSide(BorderSide(color: AppColors.border))),
-        child: Center(
-          child: Text(
-            this.text,
-            style: TextStyle(fontSize: 17.5),
-          ),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 35,
+            ),
+            Icon(
+              Icons.attach_money_outlined,
+              size: 50,
+            ),
+            Center(
+              child: Text(
+                this.text,
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
