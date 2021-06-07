@@ -3,6 +3,7 @@ import 'package:CoolCall/pages/download/download_page.dart';
 import 'package:CoolCall/pages/tema/tema_page.dart';
 import 'package:CoolCall/shared/button_widget.dart';
 import 'package:CoolCall/shared/card_widget.dart';
+import 'package:CoolCall/shared/title_widget.dart';
 import 'package:flutter/material.dart';
 
 class SubtemaPage extends StatefulWidget {
@@ -23,14 +24,7 @@ class _SubtemaPageState extends State<SubtemaPage> {
             padding: const EdgeInsets.only(top: 75),
             child: Column(
               children: [
-                Center(
-                    child: Text(
-                  "Subtemas",
-                  style: TextStyle(
-                      fontSize: 27.5,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600),
-                )),
+                TitleWidget("Subtemas"),
                 GridView.count(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
